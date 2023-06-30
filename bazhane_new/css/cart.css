@@ -1,0 +1,955 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+    font-family: "Manrope", sans-serif;
+    background-color: #f5f5f5;
+}
+html.stop,
+body.stop {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    margin: 10px;
+    background: none;
+    width: 0px;
+}
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+html::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-track-piece {
+    background: rgba(0, 0, 0, 0.15);
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+}
+
+
+
+.block-1 .container{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.block-1 .line{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 33px 1fr 33px 1fr 33px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px 0;
+    grid-gap: 33px;
+    grid-row-gap: 0;
+    border-bottom: 1px solid #BDBDBD;
+}
+.block-1 .line:nth-child(1){
+    padding-top: 0;
+}
+.block-1 .line .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.block-1 .line .img{
+    min-width: 120px;
+    min-height: 160px;
+    margin-right: 33px;
+    background-color: #fff !important;
+}
+.block-1 .line .info{
+    padding-top: 15px;
+}
+.block-1 .line .name{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+    margin-bottom: 7px;
+
+color: #000000;
+
+}
+.block-1 .line .desc{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+    margin-bottom: 10px;
+
+color: #000000;
+}
+.block-1 .line .art{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 160%;
+
+color: #000000;
+
+}
+.block-1 .line .quantitybox{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+.block-1 .line .box:nth-child(2){
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.block-1 .line .box .quantity,
+.block-1 .line .box .quantity .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.block-1 .line .box .quantity .input{
+    width: 112px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #000;
+}
+.block-1 .line .box .quantity input{
+    width: 48px;
+    height: 60px;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+text-align: center;
+-webkit-font-feature-settings: 'tnum' on, 'lnum' on;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+
+color: #000000;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.block-1 .line .box .quantity .input .btn:nth-child(1),
+.block-1 .line .box .quantity .input .btn:nth-child(3){
+    width: 32px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+}
+.block-1 .line .box .quantity .input .btn:nth-child(3){
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+.block-1 .line .box .quantity .input .btn:nth-child(1) span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: url(../img/cart-minus.svg) center center no-repeat;
+    background-size: cover;
+}
+.block-1 .line .box .quantity .input .btn:nth-child(3) span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: url(../img/cart-plus.svg) center center no-repeat;
+    background-size: cover;
+}
+.block-1 .line .box:nth-child(2) .box,
+.block-1 .line .box:nth-child(3) .box{
+    padding-top: 30px;
+    margin: 0 !important;
+}
+.block-1 .line .box:nth-child(3){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+}
+.block-1 .line .box:nth-child(3) .head{
+    padding-top: 30px;
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 160%;
+/* identical to box height, or 29px */
+
+margin-bottom: 6px;
+color: #000000;
+}
+.block-1 .line .box:nth-child(3) .price{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 600;
+font-size: 27px;
+line-height: 32px;
+-webkit-font-feature-settings: 'tnum' on, 'lnum' on;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+margin-bottom: 8px;
+color: #000000;
+}
+.block-1 .line .box:nth-child(3) .btn{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 160%;
+/* identical to box height, or 29px */
+
+-webkit-text-decoration-line: underline;
+
+        text-decoration-line: underline;
+cursor: pointer;
+color: #000000;
+}
+.block-1 .line .box:nth-child(3) .del{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../img/cart-del-btn.svg) center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.block-1 .properties{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-gap: 33px;
+}
+.block-1 .properties .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: 33px;
+}
+.block-1 .box .quantity .name,
+.block-1 .properties .box .name{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 160%;
+/* identical to box height, or 29px */
+
+
+color: #000000;
+
+}
+.block-1 .box.boxquantity{
+    display: none;
+}
+
+/*Styling Selectbox*/
+.dropdown {
+  width: 112px;
+    height: 60px;
+  display: inline-block;
+  border: 1px solid #000;
+/*  box-shadow: 0 0 2px rgb(204, 204, 204);*/
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  text-align: left;
+    padding: 0 18px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.dropdown .select {
+    cursor: pointer;
+    width: 100%;
+        min-height: 100%;
+        font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 58px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+position: relative;
+color: #000000;
+}
+.dropdown .select:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 13px;
+    height: 7px;
+    background: url(../img/product-select-btn.svg) center center no-repeat;
+    background-size: cover;
+}
+.dropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.dropdown:hover {
+    -webkit-box-shadow: 0 0 4px rgb(204, 204, 204);
+            box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown:active {
+    background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+    -webkit-box-shadow: 0 0 4px rgb(204, 204, 204);
+            box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+.dropdown.active .select > i {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    left: 0;
+    background: #f5f5f5;
+    border: 1px solid #000;
+/*    border-top: none;*/
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+    z-index: 1;
+    padding: 0;
+    list-style: none;
+    
+/*    display: block !important;*/
+}
+.dropdown .dropdown-menu li {
+    padding: 10px 18px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+} 
+/*
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+*/
+.dropdown .dropdown-menu li:active {
+/*    background-color: red;*/
+}
+.dropdown *{
+    outline: none !important;
+}
+.dropdown.color .select span,
+.dropdown .dropdown-menu span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.block-2 .container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 33px 1fr 33px 1fr 33px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 33px;
+}
+.block-2 .links{
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-gap: 100px;
+    padding-top: 60px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.block-2 .links a{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 160%;
+/* identical to box height, or 26px */
+
+-webkit-text-decoration-line: underline;
+
+        text-decoration-line: underline;
+
+color: #000000;
+}
+.block-2 .action{
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    -ms-grid-column-span: 2;
+    grid-column-end: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 56px;
+    padding-left: 285px;
+}
+.block-2.unautorized .action{
+    display: none;
+}
+.block-2.unautorized .links a:last-child{
+    display: none !important;
+}
+.block-2.unautorized .action .btn{
+    margin-top: 50px !important;
+}
+.block-2 .action .bonuses{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 160%;
+/* identical to box height, or 32px */
+
+-webkit-text-decoration-line: underline;
+
+        text-decoration-line: underline;
+
+color: #000000;
+margin-bottom: 17px;
+}
+.block-2 .action .input{
+    position: relative;
+}
+.block-2 .action input{
+    width: 400px;
+    height: 100px;
+    background: none;
+    border: 2px solid #000;
+    outline: none;
+    font-family: 'RF Dewi Extended';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000;
+    padding-left: 30px;
+    padding-right: 50px;
+    letter-spacing: 1px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.block-2 .action .input.error input{
+    border-color: #FF0A0A;
+}
+.block-2 .action .error-text{
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    -webkit-transform: translate(-100%, -50%);
+        -ms-transform: translate(-100%, -50%);
+            transform: translate(-100%, -50%);
+    max-width: 375px;
+    text-align: right;
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 160%;
+/* or 26px */
+    
+    -webkit-transition: 0.3s;
+    
+    -o-transition: 0.3s;
+    
+    transition: 0.3s;
+text-align: right;
+color: #FF0A0A;
+opacity: 0;
+}
+.block-2 .action .input.error .error-text{
+    opacity: 1;
+}
+.block-2 .action input::-webkit-input-placeholder {
+        font-family: 'RF Dewi Extended';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 100px;
+display: -webkit-box;
+display: flex;
+-webkit-box-align: center;
+        align-items: center;
+text-transform: uppercase;
+
+color: #DBDBDB;
+}
+.block-2.result .registration .btn,
+.block-2 .action .btn{
+    width: 400px;
+    height: 100px;
+    padding: 25px 30px;
+    font-family: 'RF Dewi Extended';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    background: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 46px;
+}
+.block-2 .action .btn.used{
+    background: #8E8E8E;
+}
+.block-2.result .registration .btn:before,
+.block-2 .action .btn:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 25px;
+    background: url(../img/more-btn.svg) center center no-repeat;
+    background-size: cover;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.block-2.result .registration .btn:hover:before,
+.block-2 .action .btn:hover:before{
+    -webkit-transform: translate(5px, -50%);
+        -ms-transform: translate(5px, -50%);
+            transform: translate(5px, -50%);
+}
+.block-2.result{
+    padding-bottom: 120px;
+}
+.block-2.result .registration{
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+    padding-top: 70px;
+    display: none;
+}
+.block-2.unautorized .registration{
+    display: block;
+}
+.block-2.unautorized .action{}
+.block-2.result .registration p{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 160%;
+margin-bottom: 50px;
+
+-webkit-text-decoration-line: underline;
+
+        text-decoration-line: underline;
+
+color: #000000;
+}
+.block-2.result .action{
+    padding-top: 70px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.block-2.result .price{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+.block-2.result .price .head{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+margin-bottom: 1px;
+    margin-right: 24px;
+color: #000000;
+
+}
+.block-2.result .price .summ{
+    font-family: 'RF Dewi';
+font-style: normal;
+font-weight: 600;
+font-size: 27px;
+line-height: 32px;
+
+color: #000000;
+}
+.block-2.result .price .summ span{
+    -webkit-text-decoration-line: line-through;
+            text-decoration-line: line-through;
+    color: #8E8E8E;
+    margin-right: 32px;
+}
+.block-2.result .action .btn{
+    margin-top: 16px;
+}
+@media(max-width: 450px){
+    .block-1 .line{
+        -ms-grid-columns: 1fr 33px 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 0;
+    }
+    .block-1 .line .box:nth-child(1),
+    .block-1 .line .box:nth-child(2){
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+    .block-1 .line .box:nth-child(3){
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+    }
+    .block-1 .line .img{
+        min-width: 80px;
+        min-height: 110px;
+        
+    }
+    .block-1 .line .art{
+        font-size: 10px;
+    }
+    .block-1 .properties{
+        grid-gap: 17px;
+        width: 100%;
+    }
+    .block-1 .line .box:nth-child(2){
+        
+    }
+    .block-1 .line .box:nth-child(2) .box{
+        width: calc((100% - 34px) /2);
+    }
+    .dropdown{
+        width: 100%;
+    }
+    .block-1 .line .box:nth-child(4) .head,
+    .block-1 .line .box:nth-child(3) .box,
+    .block-1 .line .box:nth-child(1) .info{
+        padding-top: 0;
+    }
+    .block-1 .line .box:nth-child(4) .del{
+        display: none;
+    }
+    .block-1 .line .del.small{
+        display: block;
+        position: absolute;
+        top: 15px;;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        background: url(http://127.0.0.1:64829/img/cart-del-btn.svg) center center no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+.block-3 .container {
+    border-top: 1px solid #BDBDBD;
+}
+.block-3 .line1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 60px 0;
+}
+.block-3 .line1 h2 {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 113%;
+    /* identical to box height, or 51px */
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.product-list .line2 {
+    display: block !important;
+}
+.swiper-pagination-box {
+    margin-top: 120px;
+    margin-bottom: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 95px;
+}
+.swiper-pagination-l2,
+.swiper-pagination {
+    position: relative !important;
+    grid-gap: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+    margin: 0 !important;
+    top: inherit !important;
+    left: inherit !important;
+    bottom: inherit !important;
+    width: auto !important;
+}
+.swiper-pagination-box span {
+    background: none !important;
+    margin: 0 !important;
+    min-width: 23px;
+    height: auto;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    text-align: center;
+    opacity: 1 !important;
+    color: #A3A3A3;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.swiper-pagination-bullet-active {
+    color: #000 !important;
+}
+.swiper-pagination-box .btn {
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+}
+@media(max-width: 1739px) {
+    .woo-variation-gallery-container {
+    max-height: 750px;
+    overflow: hidden;}
+    .block-3 .line1 {
+        padding: 50px 0;
+    }
+    .block-3 .line1 h2 {
+        font-size: 38px;
+    }
+    .swiper-pagination-box {
+        margin: 100px;
+        grid-gap: 80px;
+    }
+}

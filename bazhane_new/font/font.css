@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-SemiboldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RF Dewi";
+    src: url("../font/RFDewi-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: "RF Dewi Extended";
+    src: url("../font/RFDewiExtended-Ultralight.woff2") format("woff2");
+    font-weight: 250;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RF Dewi Extended";
+    src: url("../font/RFDewiExtended-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RF Dewi Extended";
+    src: url("../font/RFDewiExtended-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}

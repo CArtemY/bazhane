@@ -1,0 +1,266 @@
+.product-list .line2 .box .l3 .price span{
+    display: none;
+}
+.breadcrumbs .btn{
+    display: none;
+}
+body,
+html{
+/*    overflow: hidden !important;*/
+}
+
+.filters-mobile{
+    position: fixed;
+    z-index: 9999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+}
+.filters-mobile.active{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+.filters-mobile .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    z-index: -1;
+}
+.filters-mobile .bigcont{
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(255,255,0,0.2);
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.filters-mobile .bigbox{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.filters-mobile .container{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+/*    border: 1px solid red;*/
+    height: 100%;
+    -webkit-box-pack:;
+        -ms-flex-pack:;
+            justify-content: 
+}
+.filters-mobile p{
+    font-family: 'RF Dewi Extended';
+    font-style: normal;
+    font-weight: 250;
+    font-size: 24px;
+    line-height: 113%;
+    /* or 27px */
+
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.filters-mobile .head{
+    font-family: 'RF Dewi Extended';
+font-style: normal;
+font-weight: 250;
+font-size: 24px;
+line-height: 113%;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+    margin-bottom: 35px;
+}
+.filters-mobile .big-btn{
+    font-family: 'RF Dewi Extended';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 50px;
+    height: 50px;
+    background: #fff;
+    cursor: pointer;
+
+color: #555555;
+    width: 100%;
+    text-align: center;
+}
+.filters-mobile .b1{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 100%;
+}
+.filters-mobile .b1 .filter:nth-child(1),
+.filters-mobile .b1 .filter:nth-child(2),
+.filters-mobile .b1 .filter:nth-child(3){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+}
+.filters-mobile .box,
+.filters-mobile .var-group{
+/*    width: 50%;*/
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.filters-mobile .box .cont{
+/*    width: calc(100% - 30px);*/
+}
+.filters-mobile .filter{
+    max-width: 100%;
+    position: relative;
+}
+
+@media (max-width: 660px){
+    .breadcrumbs .b1{
+        display: none;
+    }
+    .product-list .line2 .box{
+        padding: 15px;
+    }
+    .product-list .line2 .box .colors span{
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+    }
+    .product-list .line2 .box .like-btn {
+        width: 26px;
+        height: 26px;
+        margin-top: 0;
+    }
+    .product-list .line2 .box .img, .product-list .line2 .box .img img {
+        height: 220px;
+    }.product-list .line2 .box .l3 .price span{
+        display: block;
+        font-family: 'RF Dewi';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #ABABAB;
+        margin-bottom: 2px;
+    }
+    .product-list .line2 .box .l1 .name{
+        display: none;
+    }
+    .product-list .line2 .box .l1{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+    .product-list .line2 .box .colors span.active {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #000;
+    }
+    .product-list .line2 .box .l3 .more p{
+        display: none;
+    }
+    .product-list .line2 .box .l3 .more span {
+        height: 20px;
+        width: 20px;
+    }
+    .product-list .line2 .box .l3 .price {
+        font-size: 16px;
+    }
+    .product-list .line2 .box .l3{
+        margin-top: 18px;
+    }
+    .product-list .line2 .box .l1{
+        margin-bottom: 25px;
+    }
+    .product-list .line3 ul{
+        margin: 0 50px;
+    }
+    
+    .breadcrumbs .btn{
+        display: block;
+        width: 100%;
+        height: 70px;
+        background: #000;
+        font-family: 'RF Dewi Extended';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 70px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 450px){
+    .product-list .line2 .box .l3 .price span,
+    .product-list .line2 .box .l3 .price {
+        font-size: 10px;
+    }
+    .product-list .line2 .box .colors span {
+        width: 10px;
+        height: 10px;
+        margin-left: 3px;
+    }
+    .product-list .line2 .box .like-btn {
+        width: 16px;
+        height: 16px;
+    }
+    .product-list .line2 .box .l3 .more span {
+        height: 12px;
+        width: 12px;
+    }
+    .product-list .line2 .box .img, .product-list .line2 .box .img img{
+        height: 130px;
+    }
+    .product-list .line2 .box .l3{
+        margin-top: 14px;
+    }
+    .product-list .line2 .box .l1{
+        margin-bottom: 15px;
+    }
+    .product-list .line2 .box{
+        padding: 10px;
+    }
+}

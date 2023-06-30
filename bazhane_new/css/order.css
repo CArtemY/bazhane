@@ -1,0 +1,714 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+    font-family: "Manrope", sans-serif;
+    background-color: #F5F5F5;
+}
+html.stop,
+body.stop {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    margin: 10px;
+    background: none;
+    width: 0px;
+}
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+html::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-track-piece {
+    background: rgba(0, 0, 0, 0.15);
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+}
+.block-1 .container {
+    padding-top: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 33px 1fr 33px 1fr 33px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 33px;
+    padding-bottom: 124px;
+}
+.block-1 .container .cont {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: 4;
+    margin-top: 90px;
+}
+.block-1 .container .cont:first-child {
+    margin-top: 0;
+}
+.block-1 h2 {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 45px;
+}
+.block-1 .vars,
+.block-1 .deliveryvars {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 33px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 33px;
+}
+.block-1 .deliveryvars {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+}
+.block-1 .vars input[type="radio"] {
+    display: none;
+}
+.block-1 .vars .label {
+    width: 100%;
+    padding: 22px 30px;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+    min-height: 90px;
+    opacity: 0.5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.block-1 .vars .head {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.block-1 .vars .desc {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
+    color: #000000;
+}
+.block-1 .vars .label span {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+.block-1 .vars .label span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0;
+}
+.block-1 .var.delivery {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+}
+.block-1 .vars .var.v1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 10px;
+}
+.block-1 .vars .var.v1 h3 {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.block-1 .vars .var.v1 .time {
+    padding-left: 30px;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    position: relative;
+    color: #000000;
+    margin-bottom: 8px;
+}
+.block-1 .vars .var.v1 .time:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 23px;
+    height: 23px;
+    background: url(../img/order-clock.svg) center center no-repeat;
+    background-size: cover;
+}
+.block-1 .vars .var.v1 a {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    position: relative;
+    color: #000000;
+}
+.block-1 .vars .var.v1 a:before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    background: #000;
+}
+.block-1 .vars .var.v1 .img {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    border: 1px solid #BDBDBD;
+}
+.block-1 .vars .v2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.block-1 .vars .v2 .label {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;;
+}
+.block-1 .vars .v2 .label:nth-child(2) {
+    margin-top: -1px;
+}
+.block-1 .delivery .novaposhta,
+.block-1 .delivery .ukrposhta{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-right: 70px !important;
+    grid-row-gap: 10px;
+}
+.block-1 .vars .v2 .head {
+    margin-right: 25px;
+    margin-bottom: 0;
+}
+.block-1 .vars .v2 .label .img-box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.block-1 .vars .v2 .label img {
+    height: 20px;
+    margin-right: 30px;
+}
+.block-1 .vars .v2 .label img:last-child {
+    margin-right: 0;
+}
+.block-1 .deliveryvars .label .head {
+    margin-bottom: 0;
+}
+.block-1 .deliveryvars .var.v1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.block-1 .postoffice {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+}
+.block-1 input {
+    width: 100%;
+    background: none;
+    border: none;
+    height: 50px;
+    border-bottom: 1px solid #BDBDBD;
+    margin-top: 20px;
+    outline: none;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #555555;
+    position: relative;
+    padding: 0;
+}
+.block-1 .input-wrapper {
+    position: relative;
+    width: 100%;
+}
+.block-1 .deliveryvars .input-wrapper {
+    margin-top: 20px;  
+}
+.block-1 .input-wrapper input {
+    margin: 0;
+}
+.block-1 .input-wrapper input.error{
+    border-bottom: 1px solid red !important;
+}
+.block-1 .input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    pointer-events: none;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    color: #555555;
+}
+.block-1 .input-wrapper label::after {
+    content: '*';
+    left: calc(5px + 100%);
+    position: absolute;
+    color: #F60D0D;
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+}
+.block-1 .input-wrapper input:not(:-moz-placeholder-shown) ~ label {
+    opacity: 0;
+}
+.block-1 .input-wrapper input:not(:-ms-input-placeholder) ~ label {
+    opacity: 0;
+}
+.block-1 .input-wrapper input:not(:placeholder-shown) ~ label {
+    opacity: 0;
+}
+.block-1 .input-wrapper input::-moz-placeholder {
+    color: transparent;
+}
+.block-1 .input-wrapper input::-webkit-input-placeholder {
+    color: transparent;
+}
+.block-1 .input-wrapper input:-ms-input-placeholder {
+    color: transparent;
+}
+.block-1 .input-wrapper input::-ms-input-placeholder {
+    color: transparent;
+}
+.block-1 .input-wrapper input::placeholder {
+    color: transparent;
+}
+.block-1 .var,
+.block-1 .deliveryvars {
+    display: none !important;
+}
+
+/*Если выбрана доставка в бутик*/
+
+#butik:checked ~ .var.butik {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+#butik:checked ~ .label.butik,
+#butik:checked ~ .label.butik span:before {
+    opacity: 1;
+}
+
+/*Если выбрана служба доставка*/
+
+#delivery:checked ~ .var.delivery {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+#delivery:checked ~ .label.delivery,
+#delivery:checked ~ .label.delivery span:before {
+    opacity: 1;
+}
+
+/*Если выбрана служба доставка Новая почта*/
+
+#delivery:checked ~ #novaposhta:checked ~ #deliveryvars {
+    display: -ms-grid !important;
+    display: grid !important;
+}
+#delivery:checked ~ #novaposhta:checked ~ .delivery .novaposhta,
+#delivery:checked ~ #novaposhta:checked ~ .delivery .novaposhta span:before {
+    opacity: 1;
+}
+
+/*Если выбрана служба доставка Новая почта адрессная доставка*/
+
+#delivery:checked ~ #adress:checked ~ #deliveryvars .var.adress {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+#delivery:checked ~ #adress:checked ~ .deliveryvars .label.adress,
+#delivery:checked ~ #adress:checked ~ .deliveryvars .label.adress span:before {
+    opacity: 1;
+}
+
+/*Если выбрана служба доставка Новая почта доставка на отделение*/
+
+#delivery:checked ~ #postoffice:checked ~ #deliveryvars .var.postoffice {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+#delivery:checked ~ #postoffice:checked ~ .deliveryvars .label.postoffice,
+#delivery:checked ~ #postoffice:checked ~ .deliveryvars .label.postoffice span:before {
+    opacity: 1;
+}
+
+/*Если выбрана служба доставка в другие страны*/
+
+#delivery:checked ~ #ukrposhta:checked ~ .deliveryvars.out,
+#delivery:checked ~ #ukrposhta:checked ~ .deliveryvars.out .var {
+    display: -ms-grid !important;
+    display: grid !important;
+}
+#delivery:checked ~ #ukrposhta:checked ~ .delivery .label.ukrposhta,
+#delivery:checked ~ #ukrposhta:checked ~ .delivery .label.ukrposhta span:before {
+    opacity: 1;
+}
+.block-1 .recipient .block {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 33px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 33px;
+    grid-gap: 33px
+}
+.block-1 .recipient .final {
+    margin-top: 70px;
+    padding-top: 50px;
+    border-top: 1px solid #000;
+}
+.block-1 .recipient .final .final-cont{
+    max-width: calc((100% - 33px) / 2);
+}
+.block-1 .recipient .final .head {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    margin-bottom: 10px;
+    color: #000000;
+}
+.block-1 .recipient .final .summ {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    color: #000000;
+}
+.block-1 .recipient .final .btn {
+    margin-top: 34px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100px;
+    padding: 25px 30px;
+    font-family: 'RF Dewi Extended';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    background: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.block-1 .recipient .final .btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 25px;
+    background: url(../img/more-btn.svg) center center no-repeat;
+    background-size: cover;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.block-1 .recipient .final .btn:hover:before {
+    -webkit-transform: translate(5px, -50%);
+    -ms-transform: translate(5px, -50%);
+    transform: translate(5px, -50%);
+}
+.block-1 .recipient .final .desc {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 142%;
+    /* or 20px */
+    color: #000000;
+}
+.block-1 .vars.payment img{
+    height: 14px;
+    margin-top: 8px;
+    }
+
+/*Если выбрана оплата на сайте*/
+#site:checked ~ .label.site,
+#site:checked ~ .label.site span:before {
+    opacity: 1;
+}
+
+/*Если выбрана оплата наложенным*/
+#ondelivery:checked ~ .label.ondelivery,
+#ondelivery:checked ~ .label.ondelivery span:before {
+    opacity: 1;
+}
+
+@media(max-width: 1739px) {
+    .block-1 .container,
+    .block-1 .vars,
+    .block-1 .deliveryvars,
+    .block-1 .recipient .block {
+        grid-gap: 27px;
+    }
+    .block-1 .container{
+        -ms-grid-columns: 260px 27px 1fr 27px 1fr 27px 260px;
+        grid-template-columns: 260px 1fr 1fr 260px;
+    }
+    .block-1 .recipient .final .btn{
+        height: 84px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .block-1 .container,
+    .block-1 .vars,
+    .block-1 .deliveryvars,
+    .block-1 .recipient .block {
+        grid-gap: 25px;
+    }
+    .block-1 .container{
+        -ms-grid-columns: 80px 25px 1fr 25px 1fr 25px 80px;
+        grid-template-columns: 80px 1fr 1fr 80px;
+    }
+
+}
+@media(max-width: 999px) {
+    .block-1 .container,
+    .block-1 .vars,
+    .block-1 .deliveryvars,
+    .block-1 .recipient .block {
+        grid-gap: 25px;
+    }
+    .block-1 .container{
+        -ms-grid-columns: 1fr 25px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .block-1 .container .cont {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+        margin-top: 50px;
+    }
+    .block-1 .vars .var.v1{
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        -ms-grid-column-span: 2;
+        grid-column-end: 3;
+    }
+}
+@media(max-width: 660px) {
+    .block-1 .container{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        padding-bottom: 80px;
+    }
+    .block-1 .container .cont{
+        -ms-grid-column-span: 2;
+        grid-column-end: 2;
+    }
+    .block-1 .vars{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .block-1 h2{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .block-1 .vars .var.v1,
+    .block-1 .var.delivery,
+    .block-1 .deliveryvars,
+    .block-1 .postoffice{
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+    }
+    .block-1 .container, .block-1 .vars, .block-1 .deliveryvars, .block-1 .recipient .block{
+        grid-gap: 20px;
+    }
+    .block-1 .vars .var.v1 a{
+        margin-left: 30px;
+    }
+    .block-1 .vars .var.v1 h3{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .block-1 .vars .var.v1 a{
+        font-size: 12px;
+    }
+    .block-1 .vars .var.v1 .img{
+        height: 80px;
+        width: 80px;
+    }
+    .block-1 .vars .label{
+        padding: 16px 20px;
+        min-height: 72px;
+    }
+    .block-1 .vars .head{
+        font-size: 16px;
+    }
+    .block-1 .vars .desc{
+        font-size: 12px;
+    }
+    .block-1 .deliveryvars{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .block-1 .recipient .block{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .block-1 .container .cont{
+        margin-top: 30px;
+    }
+    .block-1 .recipient .final{
+        margin-top: 50px;
+    }
+    .block-1 .recipient .final .final-cont{
+        max-width: none;
+    }
+    .block-1 .recipient .final .btn{
+        font-size: 18px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .block-1 .recipient .final .btn:before,
+    .block-1 .recipient .final .btn br{
+        display: none;
+    }
+}

@@ -1,0 +1,866 @@
+<?php
+
+/*
+*Template name: Product
+Template Post Type: page
+*/
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<!-- V9 -->
+
+<head>
+
+    <?php include 'custom-head.php' ?>
+
+    <!-- Style -->
+    <link href="<?php bloginfo('template_directory') ?>/css/product.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php bloginfo('template_directory') ?>/css/product-list.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="">
+
+    <?php include 'custom-header.php'; ?>
+
+    <div class="breadcrumbs" id="filters">
+        <div class="container">
+            <ul id="BreadcrumbList" class="BreadcrumbList" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <a href="HOMEURL" title="Головна" itemprop="item">
+                        <span itemprop="name">Bazhane</span>
+                        <meta itemprop="position" content="0">
+                    </a>
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <a href="../" itemprop="item" title="Каталог">
+                        <span itemprop="name">Каталог</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" title="Diana">
+                        <span itemprop="name">Diana</span>
+                        <meta itemprop="position" content="2">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="block-1-0">
+        <div class="container">
+            <p class="h1">Diana</p>
+            <p class="desc">Пальто зі спущеним рукавом прямого крою Лате</p>
+        </div>
+    </div>
+
+    <div class="block-1">
+        <div class="container">
+            <div class="left">
+                <div class="list">
+                    <div class="img-cont">
+                        <img src="<?php bloginfo('template_directory') ?>/img/cont/163%202.png">
+                    </div>
+                    <div class="img-cont">
+                        <img src="<?php bloginfo('template_directory') ?>/img/cont/1143%201.png">
+                    </div>
+                    <div class="img-cont">
+                        <img src="<?php bloginfo('template_directory') ?>/img/cont/1133%201.png">
+                    </div>
+                    <div class="img-cont">
+                        <img src="<?php bloginfo('template_directory') ?>/img/cont/1144%201.png">
+                    </div>
+                    <div class="img-cont">
+                        <img src="<?php bloginfo('template_directory') ?>/img/cont/145%201.png">
+                    </div>
+                </div>
+                <div class="big-photo">
+                    <div class="swiper mySwiperBigphoto">
+                        <div class="swiper-wrapper">
+
+                            <img class="swiper-slide" src="<?php bloginfo('template_directory') ?>/img/cont/163%202.png">
+                            <img class="swiper-slide" src="<?php bloginfo('template_directory') ?>/img/cont/1143%201.png">
+                            <img class="swiper-slide" src="<?php bloginfo('template_directory') ?>/img/cont/1133%201.png">
+                            <img class="swiper-slide" src="<?php bloginfo('template_directory') ?>/img/cont/1144%201.png">
+
+                            <img class="swiper-slide" src="<?php bloginfo('template_directory') ?>/img/cont/145%201.png">
+                        </div>
+                        <script>
+                            var swiperBigphoto = new Swiper(".mySwiperBigphoto", {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                                loop: true,
+                                navigation: {
+                                    nextEl: ".custom-button-next-bigphoto",
+                                },
+                            });
+
+                        </script>
+                    </div>
+                    <div class="custom-button-next-bigphoto" onclick="swiperBigphoto.slideNext()"></div>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Diana</h1>
+                <h2>Пальто зі спущеним рукавом прямого крою Лате </h2>
+                <div class="properties">
+                    <div class="box">
+                        <p class="name">Колір</p>
+                        <div class="dropdown dropdown1 color">
+                            <div class="select">
+                                <span style="background-color: green"></span>
+                                <i class="fa fa-chevron-left"></i>
+                            </div>
+                            <input type="hidden" name="gender">
+                            <ul class="dropdown-menu">
+                                <li id="color1"><span style="background-color: green;"></span></li>
+                                <li id="color2"><span style="background-color: white;"></span></li>
+                                <li id="color3"><span style="background-color: purple;"></span></li>
+                                <li id="color4"><span style="background-color: red;"></span></li>
+                            </ul>
+                        </div>
+                        <script>
+                            /*Dropdown Menu*/
+                            $('.dropdown1').click(function() {
+                                $(this).attr('tabindex', 1).focus();
+                                $(this).toggleClass('active');
+                                $(this).find('.dropdown-menu').slideToggle(300);
+                            });
+                            $('.dropdown1').focusout(function() {
+                                $(this).removeClass('active');
+                                $(this).find('.dropdown-menu').slideUp(300);
+                            });
+                            $('.dropdown1 .dropdown-menu li').click(function() {
+                                var backgroundColor = $(this).find('span').css('background-color');
+                                $(this).parents('.dropdown').children('.select').find('span').css('background-color', backgroundColor);
+                            });
+
+
+                            /*End Dropdown Menu*/
+
+
+                            $('.dropdown1 .dropdown-menu li').click(function() {
+                                var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+                                    msg = '<span class="msg">Hidden input value: ';
+                                $('.msg').html(msg + input + '</span>');
+                            });
+
+                        </script>
+                    </div>
+
+                    <div class="box">
+                        <p class="name">Розмір</p>
+                        <div class="dropdown dropdown2">
+                            <div class="select">
+                                <span>42</span>
+                                <i class="fa fa-chevron-left"></i>
+                            </div>
+                            <input type="hidden" name="gender">
+                            <ul class="dropdown-menu">
+                                <li id="size42">42</li>
+                                <li id="size43">43</li>
+                                <li id="size44">44</li>
+                            </ul>
+                        </div>
+                        <script>
+                            /*Dropdown Menu*/
+                            $('.dropdown2').click(function() {
+                                $(this).attr('tabindex', 1).focus();
+                                $(this).toggleClass('active');
+                                $(this).find('.dropdown-menu').slideToggle(300);
+                            });
+                            $('.dropdown2').focusout(function() {
+                                $(this).removeClass('active');
+                                $(this).find('.dropdown-menu').slideUp(300);
+                            });
+                            $('.dropdown2 .dropdown-menu li').click(function() {
+                                $(this).parents('.dropdown').find('span').text($(this).text());
+                                $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+                            });
+                            /*End Dropdown Menu*/
+
+
+                            $('.dropdown2 .dropdown-menu li').click(function() {
+                                var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+                                    msg = '<span class="msg">Hidden input value: ';
+                                $('.msg').html(msg + input + '</span>');
+                            });
+
+                        </script>
+                    </div>
+
+                    <div class="box">
+                        <p class="name">Довжина</p>
+                        <div class="dropdown dropdown3">
+                            <div class="select">
+                                <span>1,15 м</span>
+                                <i class="fa fa-chevron-left"></i>
+                            </div>
+                            <input type="hidden" name="gender">
+                            <ul class="dropdown-menu">
+                                <li id="length115">1,15 м</li>
+                                <li id="length125">1,25 м</li>
+                                <li id="length135">1,35 м</li>
+                            </ul>
+                        </div>
+                        <script>
+                            /*Dropdown Menu*/
+                            $('.dropdown3').click(function() {
+                                $(this).attr('tabindex', 1).focus();
+                                $(this).toggleClass('active');
+                                $(this).find('.dropdown-menu').slideToggle(300);
+                            });
+                            $('.dropdown3').focusout(function() {
+                                $(this).removeClass('active');
+                                $(this).find('.dropdown-menu').slideUp(300);
+                            });
+                            $('.dropdown3 .dropdown-menu li').click(function() {
+                                $(this).parents('.dropdown').find('span').text($(this).text());
+                                $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+                            });
+                            /*End Dropdown Menu*/
+
+
+                            $('.dropdown3 .dropdown-menu li').click(function() {
+                                var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+                                    msg = '<span class="msg">Hidden input value: ';
+                                $('.msg').html(msg + input + '</span>');
+                            });
+
+                        </script>
+                    </div>
+                </div>
+                <a href="#" class="sizes">Розмірна сітка</a>
+                <p class="price">5 500 ₴</p>
+                <div class="btns">
+                    <div class="btn1">Замовити в один клік</div>
+                    <div class="btn2">ДОДАТИ в корзину</div>
+                    <div class="btn3"><span></span></div>
+                </div>
+                <div class="info-list">
+                    <div class="box">
+                        <div class="line line-question active" style="padding-bottom: 136px;">
+                            <div class="head" onclick="question(0)">
+                                <div class="close"><span></span><span></span></div>
+                                <h3>Опис</h3>
+                            </div>
+                            <div class="text">
+                                <p>Our agency specializes in creating customized PR strategies that are tailored to each client's unique business needs. </p>
+                            </div>
+                        </div>
+                        <div class="line line-question">
+                            <div class="head" onclick="question(1)">
+                                <div class="close"><span></span><span></span></div>
+                                <h3>Склад та розмір</h3>
+                            </div>
+                            <div class="text">
+                                <p>Sure, an integrated approach to work will help to achieve high results much faster, regardless of the specific sphere.</p>
+                            </div>
+                        </div>
+                        <div class="line line-question">
+                            <div class="head" onclick="question(2)">
+                                <div class="close"><span></span><span></span></div>
+                                <h3>Доставка</h3>
+                            </div>
+                            <div class="text">
+                                <p>Доставка здійснюється за рахунок покупця згідно з тарифами перевізника.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        //Номер последнего вопроса, если вопросы закрыты то -1
+                        lastquestion = -1;
+
+                        function question(a) {
+                            if (lastquestion == a) {
+                                questions = document.querySelectorAll('.line-question');
+                                questions[a].style.paddingBottom = "0";
+                                questions[a].classList.remove('active');
+                                lastquestion = -1;
+                            } else {
+                                questions = document.querySelectorAll('.line-question');
+                                i = 0;
+                                while (i < questions.length) {
+                                    questions[i].style.paddingBottom = "0";
+                                    questions[i].classList.remove('active');
+                                    i++;
+                                }
+                                text = document.querySelectorAll('.line-question .text p');
+                                height = text[a].scrollHeight;
+                                console.log(height);
+                                questions[a].style.paddingBottom = 20 + height + "px";
+                                questions[a].classList.add('active');
+                                lastquestion = a;
+                            }
+                        }
+                        question(0);
+
+                        //Отслеживаем изменение ширины экрана -> Если есть открытый вопрос, считаем заново его высоту и задаем ее
+                        window.addEventListener('resize', function() {
+                            // gorizontal();
+                            questions = document.querySelectorAll('.line-question');
+                            i = 0;
+                            while (i < questions.length) {
+                                if (questions[i].paddingBottom != 10) {
+                                    text = document.querySelectorAll('.line-question .text p');
+                                    height = text[lastquestion].scrollHeight;
+                                    questions[lastquestion].style.paddingBottom = 20 + height + "px";
+                                }
+                                i++;
+                            }
+                        });
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-2 product-list">
+        <div class="container">
+            <div class="line1">
+                <h2>Доповніть образ</h2>
+            </div>
+            <div class="line2 swiper mySwiper">
+
+                <div class="swiper-wrapper">
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination-box">
+                    <span class="btn custom-button-prev">Назад</span>
+                    <div class="swiper-pagination"></div>
+                    <span class="btn custom-button-next">Далі</span>
+                </div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiperL1 = new Swiper(".mySwiper", {
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        renderBullet: function(index, className) {
+                            return '<span class="' + className + '">' + (index + 1) + "</span>";
+                        },
+                    },
+                    navigation: {
+                        nextEl: ".custom-button-next",
+                        prevEl: ".custom-button-prev",
+                    },
+
+                    // Default parameters
+                    loop: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                    // Responsive breakpoints
+                    breakpoints: {
+                        // when window width is >= 320px
+                        //                    320: {
+                        //                        slidesPerView: 2,
+                        //                        spaceBetween: 20
+                        //                    },
+                        // when window width is >= 480px
+                        660: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                        // when window width is >= 640px
+                        1439: {
+                            slidesPerView: 4,
+                            spaceBetween: 33
+                        }
+                    }
+                });
+
+            </script>
+        </div>
+    </div>
+
+    <div class="block-2 product-list">
+        <div class="container">
+            <div class="line1">
+                <h2>Нещодавно переглядали</h2>
+            </div>
+            <div class="line2 swiper mySwiperL2">
+
+                <div class="swiper-wrapper">
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="box swiper-slide">
+                        <div class="l1">
+                            <div class="name">
+                                <p class="type">ПАЛЬТО</p>
+                                <h4>Название</h4>
+                            </div>
+                            <div class="like-btn"></div>
+                            <div class="colors">
+                                <span style="background-color: #686868; border-color: #686868"></span>
+                                <span style="background-color: #FFFFFF; border-color: #C4C4C3"></span>
+                                <span style="background-color: #A66C6F; border-color: #A66C6F"></span>
+                                <span style="background-color: #E4CDB1; border-color: #E4CDB1"></span>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="<?php bloginfo('template_directory') ?>/img/poduct-catalog.png">
+                        </div>
+                        <div class="l3">
+                            <p class="price">12 800 ₴</p>
+                            <div class="more">
+                                <p>Докладніше</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination-box">
+                    <span class="btn custom-button-prev-l2">Назад</span>
+                    <div class="swiper-pagination-l2"></div>
+                    <span class="btn custom-button-next-l2">Далі</span>
+                </div>
+            </div>
+            <!-- Swiper JS -->
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiperL2 = new Swiper(".mySwiperL2", {
+                    //                slidesPerView: 4,
+                    //                spaceBetween: 33,
+                    pagination: {
+                        el: ".swiper-pagination-l2",
+                        clickable: true,
+                        renderBullet: function(index, className) {
+                            return '<span class="' + className + '">' + (index + 1) + "</span>";
+                        },
+                    },
+                    navigation: {
+                        nextEl: ".custom-button-next-l2",
+                        prevEl: ".custom-button-prev-l2",
+                    },
+
+                    // Default parameters
+                    loop: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                    // Responsive breakpoints
+                    breakpoints: {
+                        // when window width is >= 320px
+                        //                    320: {
+                        //                        slidesPerView: 2,
+                        //                        spaceBetween: 20
+                        //                    },
+                        // when window width is >= 480px
+                        660: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                        // when window width is >= 640px
+                        1439: {
+                            slidesPerView: 4,
+                            spaceBetween: 33
+                        }
+                    }
+                });
+
+            </script>
+        </div>
+    </div>
+
+    <?php include 'custom-footer.php' ?>
+
+</body>
+
+</html>

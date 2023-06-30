@@ -1,0 +1,281 @@
+.modal .close-btn {
+    width: 25px;
+    height: 25px;
+    background: url(../img/close-btn.png) center center no-repeat;
+    background-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.modal .close {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+}
+.modal .close svg {
+    width: 25px;
+    height: 25px;
+}
+.bgf2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(3,3,3,0.7);
+    */
+    /*-webkit-backdrop-filter: blur(3px);
+    */
+    /*backdrop-filter: blur(3px);
+    */
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    visibility: hidden;
+    z-index: 99999999999999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 0;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+    /* background: rgba(1,1,1,0.8);
+    */
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-dialog {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 30px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.modal-content {
+    position: relative;
+    top: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: 0;
+    width: 560px;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform: translate(0, 25%) scale(0.9);
+    -ms-transform: translate(0, 25%) scale(0.9);
+    transform: translate(0, 25%) scale(0.9);
+}
+.modal-content .table-head {
+    font-family: 'RF Dewi';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 113%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.modal-content th,
+.modal-content td {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 0;
+}
+.modal-content th:nth-child(1),
+.modal-content td:nth-child(1) {
+    width: 60px;
+    /*    background: red;*/
+}
+@media(max-width: 450px) {
+    .modal-content {
+        border-radius: 0;
+    }
+}
+.modal.active .modal-content {
+    -webkit-transform: translate(0, 0) scale(1) !important;
+    -ms-transform: translate(0, 0) scale(1) !important;
+    transform: translate(0, 0) scale(1) !important;
+}
+.modal .container-form {
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.modal .h4 {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    background: linear-gradient(180.96deg, #FFFFFF 0.82%, rgba(255, 255, 255, 0) 171.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 10px
+}
+.modal .descr {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+.modal .small {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgb(130, 130, 130);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+.modal .small a {
+    border-bottom: 1px solid rgb(59, 59, 59);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    color: rgb(130, 130, 130);
+}
+.modal .content-close {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: none;
+}
+.modal .content-close .close {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 5px;
+    background: url(../img/close-btn-white.png) center center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+}
+@media (max-width: 1300px) {
+    .modal-content {
+        width: 460px;
+    }
+}
+.message .modal-content{
+    width: 360px;
+}
+.message .table-head{
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .modal.active {
+        overflow: hidden;
+    }
+    .modal-content {
+        width: 100%;
+        max-height: 100vh;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+    #form3 .modal-content {
+        min-height: 0;
+    }
+    .modal-dialog {
+        padding: 0;
+    }
+    .modal .container-form {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0;
+    }
+    .modal .content-close {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .modal .descr {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .modal .h4 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    .modal .form-head {
+        margin-bottom: 30px;
+    }
+    .modal .content-close {
+        height: 20px;
+    }
+    .modal .content-close .close {
+        top: 20px;
+    }
+    .modal .close svg g{
+        fill: #000;;
+    }
+    .modal-content .table-head{
+        margin-top: 30px
+    }
+}
